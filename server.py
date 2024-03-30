@@ -58,6 +58,7 @@ def FindPort(host, from_range, to_range):
 
 
 def ShowPorts(open_ports):
+    current_date = datetime.now()
     if len(open_ports) > 0:
         print("****************************************")
         for open_port in open_ports:
@@ -65,14 +66,13 @@ def ShowPorts(open_ports):
         print("****************************************")
     else:
         print("No open ports found!")
-    current_date = datetime.now()
     if len(open_ports) > 1:
         print(f"{current_date.strftime('%H:%M:%S')} Scan finished found {len(open_ports)} open ports on the server")
     elif len(open_ports) <= 1:
         print(f"{current_date.strftime('%H:%M:%S')} Scan finished found {len(open_ports)} open port on the server")
 
 host = getInput()
-choice = int(input("Enter a scan option: 1.From port range to port range 2.Scan default ports: "))
+choice = int(input("Enter a scan option: \n1.From port range to port range \n2.Scan default ports: "))
 if choice == 1:
     from_port_range = int(input("Enter a from port range: "))
     to_port_range = int(input("Enter a to port range: "))
