@@ -2,7 +2,7 @@
 import socket
 from datetime import datetime
 
-def getInput():
+def GetInput():
     while True:
         try:
             host = input("Enter host to scan: ")
@@ -14,6 +14,14 @@ def getInput():
             except socket.gaierror:
                 pass
     return host
+
+def GetChoiceInput():
+    while choice != 1 or choice != 2:
+        try:
+            choice = int(input("Enter a scan option: \n1.From port range to port range \n2.Scan default ports: "))
+        except:
+            pass
+    return choice
 
 
 
@@ -71,8 +79,9 @@ def ShowPorts(open_ports):
     elif len(open_ports) <= 1:
         print(f"{current_date.strftime('%H:%M:%S')} Scan finished found {len(open_ports)} open port on the server")
 
-host = getInput()
-choice = int(input("Enter a scan option: \n1.From port range to port range \n2.Scan default ports: "))
+host = GetInput()
+choice = GetChoiceInput()
+
 if choice == 1:
     from_port_range = int(input("Enter a from port range: "))
     to_port_range = int(input("Enter a to port range: "))
