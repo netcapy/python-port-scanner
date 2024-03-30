@@ -21,7 +21,7 @@ def FindDefaultPort():
     current_date = datetime.now()
     print(f"{current_date.strftime("%H:%M:%S")} Starting scanning at {host}...\n")
     open_ports = []
-    default_ports = [22,23,80,81,443,445,3089,8080]
+    default_ports = [21,22,23,80,81,443,445,3089,8080]
 
     for port in default_ports:
         try:
