@@ -25,7 +25,7 @@ def GetChoiceInput():
             elif choice == 2:
                 return choice
             else:
-                print("Please enter right scan option!")
+                print("Please enter right scan option!\n")
         except:
             pass
 
