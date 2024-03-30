@@ -19,10 +19,13 @@ def GetChoiceInput():
     while True:
         try:
             choice = int(input("Enter a scan option: \n1.From port range to port range \n2.Scan default ports: "))
-            if choice != 1 or choice !=2:
-                print("Please enter right scan choice!")
-            else:
+            print(choice)
+            if choice == 1:
                 return choice
+            elif choice == 2:
+                return choice
+            else:
+                print("Please enter right scan option!")
         except:
             pass
 
