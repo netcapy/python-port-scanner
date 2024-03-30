@@ -19,7 +19,7 @@ def getInput():
 
 def FindDefaultPort():
     current_date = datetime.now()
-    print(f"{current_date.strftime("%H:%M:%S")} Starting scanning at {host}...\n")
+    print(f"{current_date.strftime('%H:%M:%S')} Starting scanning at {host}...\n")
     open_ports = []
     default_ports = [21,22,23,80,81,443,445,3089,8080]
 
@@ -40,7 +40,7 @@ def FindPort(host, from_range, to_range):
     current_date = datetime.now()
     if from_range > to_range:
         return None
-    print(f"{current_date.strftime("%H:%M:%S")} Starting scanning at {host}...\n")
+    print(f"{current_date.strftime('%H:%M:%S')} Starting scanning at {host}...\n")
     open_ports = []
 
     for port in range(from_range, to_range + 1):
