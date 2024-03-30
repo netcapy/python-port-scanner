@@ -16,6 +16,7 @@ def GetInput():
     return host
 
 def GetChoiceInput():
+    choice = 0
     while choice != 1 or choice != 2:
         try:
             choice = int(input("Enter a scan option: \n1.From port range to port range \n2.Scan default ports: "))
